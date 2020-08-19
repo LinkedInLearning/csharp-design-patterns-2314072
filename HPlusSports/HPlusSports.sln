@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPlusSports.Web", "HPlusSports.Web\HPlusSports.Web.csproj", "{7EAA00CC-1AC7-4382-A373-1735373A15DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPlusSports.DAL", "HPlusSports.DAL\HPlusSports.DAL.csproj", "{848034C4-FE38-4DF7-B242-68D90BFD8D50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPlusSports.Models", "HPlusSports.Models\HPlusSports.Models.csproj", "{11F519EF-1D0D-41FF-9163-0A812B0EB201}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPlusSports.Core", "HPlusSports.Core\HPlusSports.Core.csproj", "{7D463B86-9C54-4425-8CAB-066ED1182F0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{72630FFE-AE22-48D7-B76D-E134408E4287}"
+	ProjectSection(SolutionItems) = preProject
+		HPlusSports.sql = HPlusSports.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPlusSports.Core.Test", "HPlusSports.Core.Test\HPlusSports.Core.Test.csproj", "{98C2000C-A8C8-43E3-9510-CA06C31C5302}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPlusSports.DAL.Test", "HPlusSports.DAL.Test\HPlusSports.DAL.Test.csproj", "{68725572-DC64-4D13-8967-2D7CC5E71ADD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EAA00CC-1AC7-4382-A373-1735373A15DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EAA00CC-1AC7-4382-A373-1735373A15DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EAA00CC-1AC7-4382-A373-1735373A15DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EAA00CC-1AC7-4382-A373-1735373A15DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{848034C4-FE38-4DF7-B242-68D90BFD8D50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{848034C4-FE38-4DF7-B242-68D90BFD8D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{848034C4-FE38-4DF7-B242-68D90BFD8D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{848034C4-FE38-4DF7-B242-68D90BFD8D50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11F519EF-1D0D-41FF-9163-0A812B0EB201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11F519EF-1D0D-41FF-9163-0A812B0EB201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11F519EF-1D0D-41FF-9163-0A812B0EB201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11F519EF-1D0D-41FF-9163-0A812B0EB201}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D463B86-9C54-4425-8CAB-066ED1182F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D463B86-9C54-4425-8CAB-066ED1182F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D463B86-9C54-4425-8CAB-066ED1182F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D463B86-9C54-4425-8CAB-066ED1182F0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98C2000C-A8C8-43E3-9510-CA06C31C5302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C2000C-A8C8-43E3-9510-CA06C31C5302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C2000C-A8C8-43E3-9510-CA06C31C5302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C2000C-A8C8-43E3-9510-CA06C31C5302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68725572-DC64-4D13-8967-2D7CC5E71ADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68725572-DC64-4D13-8967-2D7CC5E71ADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68725572-DC64-4D13-8967-2D7CC5E71ADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68725572-DC64-4D13-8967-2D7CC5E71ADD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,26 @@
+@model IEnumerable<HPlusSports.Models.Salesperson>
+@{ 
+    ViewBag.Title = "Sales Team";
+}
+<h2>Sales Team</h2>
+<table style="border-spacing:1.5em;border-collapse:inherit">
+    <thead>
+        <tr>
+            <td> Name </td>
+            <td> Email </td>
+            <td> Orders </td>
+            <td> State </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model)
+        {
+            <tr>
+                <td><a asp-action="Edit" asp-route-id="@person.Id" >@person.FullName</a></td>
+                <td> @person.Email </td>
+                <td> @person.Order.Count() </td>
+                <td> @person.SalesGroupState </td>
+            </tr>
+        }
+    </tbody>
+</table>

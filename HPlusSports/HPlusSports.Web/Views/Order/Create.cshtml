@@ -1,0 +1,22 @@
+﻿@model HPlusSports.Web.ViewModels.CreateOrderViewModel
+@{
+    ViewBag.Title = "Create Order";
+}
+<h3>New Order</h3>
+
+<form asp-action="CreateOrder" method="post">
+    <div>
+        <span><b>Select Customer</b></span>
+        <select asp-for="CustomerId" asp-items="Model.Customers"></select>
+    </div>
+    <div style="clear:left">
+        <span><b>Select Sales Person</b></span>
+        <select asp-for="SalesPersonId" asp-items="Model.SalesPeople"></select>
+    </div>
+    <div style="clear:left">
+        <div><b>Select Items</b></div>
+        <select style="clear:both;height:10em;width:20em" asp-for="SelectedProductCodes" asp-items="Model.Products"></select>
+    </div>
+    <button type="submit">Create</button>
+</form>
+
