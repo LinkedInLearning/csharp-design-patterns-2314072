@@ -2,31 +2,45 @@ using System.Collections.Generic;
 using HPlusSports.Core;
 using HPlusSports.Models;
 
-namespace HPlusSports.Web.ViewModels{
-    public class OrderItemViewModel {
-        private Order order;
-
-        public OrderItemViewModel (IEnumerable<Order> orders, Order adaptee)
+namespace HPlusSports.Web.ViewModels
+{
+    public class OrderItemViewModel : Order, IOrderItemViewModel
+    {
+        public OrderItemViewModel(IEnumerable<Order> orders, Order o)
         {
-            order = adaptee;
-            PreviousOrderDates = string.Join("\n",  
+            base.CreatedDate = o.CreatedDate;
+            base.Customer = o.Customer;
+            base.CustomerId = o.CustomerId;
+            base.Deleted = o.Deleted;
+            base.Id = o.Id;
+            base.OrderDate = o.OrderDate;
+            base.OrderItem = o.OrderItem;
+            base.Salesperson = o.Salesperson;
+            base.SalespersonId = o.SalespersonId;
+            base.Status = o.Status;
+            base.TotalDue = o.TotalDue;
+
+            PreviousOrderDates = string.Join("\n",
                         orders.FilterdSelect(
-                            o => o.CustomerId == order.CustomerId 
-                            && o.OrderDate < order.OrderDate 
-                            , o => o.OrderDate.ToString("d") 
+                            o => o.CustomerId == CustomerId
+                            && o.OrderDate < base.OrderDate
+                            , o => o.OrderDate.ToString("d")
                         ));
         }
-        
-        public int CustomerId => order.CustomerId;
-        public string CustomerName => order.Customer.FirstName + " " + 
-            order.Customer.LastName;
 
-        public string TotalDue => order.TotalDue?.ToString("f2");
+        public string CustomerName => Customer.FirstName + " " + Customer.LastName;
+        public new string TotalDue => base.TotalDue?.ToString("f2");
+        public new string OrderDate => base.OrderDate.ToString("d");
+        public string PreviousOrderDates { get; private set; }
+    }
 
-        public string Status => order.Status;
-
-        public string OrderDate => order.OrderDate.ToString("d");
-
-        public string PreviousOrderDates {get; private set;}
+    public interface IOrderItemViewModel
+    {
+        int CustomerId { get; }
+        string CustomerName { get; }
+        string Status { get; }
+        string TotalDue { get; }
+        string OrderDate { get; }
+        string PreviousOrderDates { get; }
     }
 }
