@@ -1,4 +1,5 @@
 @model HPlusSports.Web.ViewModels.OrderListViewModel
+@using HPlusSports.Core 
 @{ 
     ViewBag.Title = "Orders";
 }
@@ -8,6 +9,7 @@
     <thead>
         <tr>
             <td> Customer Name </td>
+            <td> Previous Order Dates </td> 
             <td> Total Due </td>
             <td> Status </td>
             <td> Order Date </td>
@@ -18,6 +20,12 @@
         {
             <tr>
                 <td><a asp-action="Customer" asp-route-id="@order.Customer.Id" >@order.Customer.FirstName @order.Customer.LastName</a></td>
+                <td> @(string.Join("\n",  
+                        Model.Orders.FilterdSelect(o => o.CustomerId == order.CustomerId && o.OrderDate < order.OrderDate 
+                            , o => o.OrderDate.ToString("d") 
+                        ) 
+                    ) 
+                )</td>
                 <td> @order.TotalDue?.ToString("f2") </td>
                 <td> @order.Status </td>
                 <td> @order.OrderDate.ToString("d") </td>
