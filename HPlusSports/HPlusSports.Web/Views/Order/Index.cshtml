@@ -21,7 +21,9 @@
             <tr>
                 <td><a asp-action="Customer" asp-route-id="@order.Customer.Id" >@order.Customer.FirstName @order.Customer.LastName</a></td>
                 <td> @(string.Join("\n",  
-                        Model.Orders.FilterdSelect(o => o.CustomerId == order.CustomerId && o.OrderDate < order.OrderDate 
+                        Model.Orders.FilterdSelect(
+                            o => o.CustomerId == order.CustomerId 
+                            && o.OrderDate < order.OrderDate 
                             , o => o.OrderDate.ToString("d") 
                         ) 
                     ) 
