@@ -19,18 +19,12 @@
         @foreach (var order in Model.Orders)
         {
             <tr>
-                <td><a asp-action="Customer" asp-route-id="@order.Customer.Id" >@order.Customer.FirstName @order.Customer.LastName</a></td>
-                <td> @(string.Join("\n",  
-                        Model.Orders.FilterdSelect(
-                            o => o.CustomerId == order.CustomerId 
-                            && o.OrderDate < order.OrderDate 
-                            , o => o.OrderDate.ToString("d") 
-                        ) 
-                    ) 
-                )</td>
-                <td> @order.TotalDue?.ToString("f2") </td>
+                <td><a asp-action="Customer" asp-route-id="@order.CustomerId" >
+                    @order.CustomerName</a></td>
+                <td> @order.PreviousOrderDates </td>
+                <td> @order.TotalDue </td>
                 <td> @order.Status </td>
-                <td> @order.OrderDate.ToString("d") </td>
+                <td> @order.OrderDate </td>
             </tr>
         }
     </tbody>
