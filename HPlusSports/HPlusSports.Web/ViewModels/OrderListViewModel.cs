@@ -8,6 +8,6 @@ namespace HPlusSports.Web.ViewModels
 {
     public class OrderListViewModel
     {
-        public IList<Order> Orders { get; set; }
+        public IEnumerable<Order> Orders { get; set; }
     }
 }
