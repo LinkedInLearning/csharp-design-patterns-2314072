@@ -1,9 +1,5 @@
-# COURSENAME
-This is the repository for the LinkedIn Learning course `[COURSENAME]`. The full course is available from [LinkedIn Learning](https://linkedin.com/learning/).
-
-[![COURSENAME](COURSEIMAGE)](LICOURSEURL)
-
-[COURSEDESCRIPTION]
+# C# Design Patterns
+This is the repository for the LinkedIn Learning course `[C# Design Patterns]`. The full course is available from [LinkedIn Learning](https://linkedin.com/learning/).
 
 ## Instructions
 This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
